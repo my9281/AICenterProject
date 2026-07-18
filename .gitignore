@@ -1,16 +1,4 @@
-# Node / frontend artifacts
-node_modules/
-dist/
-.vite/
-
-# Logs
-npm-debug.log*
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Environment
-.env
-.env.*
+bin/
+obj/
+App_Data/
+appsettings.Production.json
