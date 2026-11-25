@@ -30,3 +30,11 @@ dotnet run --project AICenterProject
 用户返回字段为 `userId`、`username`、`note`、`superuser`、`createdAt`；密码只保存 PBKDF2 哈希且永不返回。
 
 > 当前 Token 保存在进程内，服务重启后需重新登录。单机部署可直接使用；多实例或需要撤销/审计时应替换为数据库及集中式 Token/会话存储。
+
+## 未完成
+
+- 没有登出、改密、删除或更新用户。
+- Token 只活在本进程，重启失效，多实例之间不共享，也不能撤销。
+- `appsettings.json` 里有默认超级用户密码。生产改用环境变量，不要沿用仓库里的值。
+- 用户存在 `App_Data/users.json`，没有数据库。
+- 仓库名里的 AI 还没有对应实现，这里只有账号接口。
